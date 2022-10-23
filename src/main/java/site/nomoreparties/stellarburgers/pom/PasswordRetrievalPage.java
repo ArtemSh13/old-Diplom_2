@@ -8,6 +8,8 @@ import static com.codeborne.selenide.Selenide.$;
 public class PasswordRetrievalPage {
     public final static String PASSWORD_RETRIEVAL_PAGE_URL = ConstructorPage.MAIN_PAGE_URL + "/forgot-password";
 
+    public final Header header = new Header();
+
     private SelenideElement passwordRetrievalLabel = $(byXpath(".//h2[text()='Восстановление пароля']"));
 
     private SelenideElement emailField = $(byXpath(".//input[@class='text input__textfield text_type_main-default']"));
