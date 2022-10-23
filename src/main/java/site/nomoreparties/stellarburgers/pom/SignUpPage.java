@@ -28,4 +28,31 @@ public class SignUpPage {
 
     private SelenideElement signInLink = $(byXpath(".//a[text()='Войти']"));
 
+    public void enterName(String name) {
+        nameField.setValue(name);
+    }
+
+    public void enterEmail(String email) {
+        emailField.setValue(email);
+    }
+
+    public void enterPassword(String password) {
+        passwordField.setValue(password);
+    }
+
+    public void clickSignUpButton() {
+        registerButton.click();
+    }
+
+    public void clickSignInLink() {
+        signInLink.click();
+    }
+
+    public void signUp(String name, String email, String password) {
+        enterName(name);
+        enterEmail(email);
+        enterPassword(password);
+        clickSignUpButton();
+    }
+
 }
