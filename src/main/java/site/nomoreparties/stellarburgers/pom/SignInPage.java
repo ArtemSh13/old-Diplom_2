@@ -8,6 +8,8 @@ import static com.codeborne.selenide.Selenide.$;
 public class SignInPage {
     public static final String LOG_IN_PAGE_URL = ConstructorPage.MAIN_PAGE_URL + "/login";
 
+    public final Header header = new Header();
+
     private SelenideElement signInLabel = $(byXpath(".//h2[text()='Вход']"));
 
     private SelenideElement emailField = $(byXpath(".//input[@class='text input__textfield text_type_main-default' and @type='text']"));
