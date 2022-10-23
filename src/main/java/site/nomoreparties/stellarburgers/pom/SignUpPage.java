@@ -22,7 +22,7 @@ public class SignUpPage {
 
     private SelenideElement showPasswordButton = $(byXpath(".//div[@class='input__icon input__icon-action']"));
 
-    private SelenideElement registerButton = $(byXpath(".//button[text()='Зарегистрироваться']"));
+    private SelenideElement signUpButton = $(byXpath(".//button[text()='Зарегистрироваться']"));
 
     private SelenideElement alreadyRegisteredLabel = $(byXpath(".//p[@class='undefined text text_type_main-default text_color_inactive mb-4']"));
 
@@ -41,7 +41,7 @@ public class SignUpPage {
     }
 
     public void clickSignUpButton() {
-        registerButton.click();
+        signUpButton.click();
     }
 
     public void clickSignInLink() {
