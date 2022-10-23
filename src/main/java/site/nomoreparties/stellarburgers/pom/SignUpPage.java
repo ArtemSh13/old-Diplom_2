@@ -1,6 +1,7 @@
 package site.nomoreparties.stellarburgers.pom;
 
 import com.codeborne.selenide.ElementsCollection;
+import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.SelenideElement;
 
 import static com.codeborne.selenide.Selectors.byXpath;
@@ -22,11 +23,13 @@ public class SignUpPage {
 
     private SelenideElement passwordField = registrationFields.get(2);
 
+    private String incorrectPasswordLabelXpath = ".//p[text()='Некорректный пароль']";
+
     private SelenideElement showPasswordButton = $(byXpath(".//div[@class='input__icon input__icon-action']"));
 
     private SelenideElement signUpButton = $(byXpath(".//button[text()='Зарегистрироваться']"));
 
-    private SelenideElement alreadyRegisteredLabel = $(byXpath(".//p[@class='undefined text text_type_main-default text_color_inactive mb-4']"));
+    private String alreadySignedUpLabelXpath = ".//p[@class='undefined text text_type_main-default text_color_inactive mb-4']";
 
     private SelenideElement signInLink = $(byXpath(".//a[text()='Войти']"));
 
