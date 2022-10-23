@@ -10,6 +10,8 @@ import static com.codeborne.selenide.Selenide.$$;
 public class ConstructorPage {
     public static final String MAIN_PAGE_URL = "https://stellarburgers.nomoreparties.site/";
 
+    public final Header header = new Header();
+
     private SelenideElement assembleBurgerLabel = $(byClassName("text text_type_main-large mb-5 mt-10"));
 
     private SelenideElement bunsTab = $(byXpath(".//span[text()='Булки']"));
