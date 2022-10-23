@@ -10,6 +10,8 @@ import static com.codeborne.selenide.Selenide.$$;
 
 public class ProfilePage {
 
+    public static final String PROFILE_PAGE_URL = ConstructorPage.MAIN_PAGE_URL + "/account/profile";
+
     public final Header header = new Header();
 
     private SelenideElement profileLink = $(byXpath(".//a[@class='Account_link__2ETsJ text text_type_main-medium text_color_inactive Account_link_active__2opc9']"));
