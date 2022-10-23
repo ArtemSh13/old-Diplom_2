@@ -53,6 +53,14 @@ public class SignUpPage {
         signInLink.click();
     }
 
+    public boolean isPasswordCorrect() {
+        return !($(byXpath(incorrectPasswordLabelXpath)).exists());
+    }
+
+    public boolean isUserAlreadySignedUp() {
+        return $(byXpath(alreadySignedUpLabelXpath)).exists();
+    }
+
     public void signUp(String name, String email, String password) {
         enterName(name);
         enterEmail(email);
