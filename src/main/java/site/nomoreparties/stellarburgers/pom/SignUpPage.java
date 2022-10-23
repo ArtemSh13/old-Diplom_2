@@ -10,6 +10,8 @@ import static com.codeborne.selenide.Selenide.$$;
 public class SignUpPage {
     public final static String SIGN_UP_PAGE_URL = ConstructorPage.MAIN_PAGE_URL + "/register";
 
+    public final Header header = new Header();
+
     private SelenideElement registrationLabel = $(byXpath(".//h2[text()='Регистрация']"));
 
     private ElementsCollection registrationFields = $$(byXpath(".//input[@class='text input__textfield text_type_main-default']"));
